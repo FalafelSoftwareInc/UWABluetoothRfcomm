@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="UniversalBluetoothTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalBluetoothTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <CollectionViewSource x:ConnectionId='1' x:Name="cvs" />
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:ConnectionId='2' x:Name="Input" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Button x:ConnectionId='9' Name="ServerButton"                           >Start Server</Button>
+                <Button x:ConnectionId='10' Name="ClientButton"                           >Start Client</Button>
+                <Button x:ConnectionId='11' Name="DisconnectButton" IsEnabled="False"                               >Disconnect</Button>
+            </StackPanel>
+            <TextBlock x:ConnectionId='3' x:Name="ServiceName" Grid.Row="2" Text="Current Service Name" TextWrapping="Wrap" Margin="0,0,0,10" Visibility="Collapsed" />
+            <ScrollViewer Grid.Row="3" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid x:ConnectionId='4' x:Name="ServiceSelector" Visibility="Collapsed">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Click a device to select" Margin="0,0,0,10"/>
+                            <ListBox x:ConnectionId='8' x:Name="ServiceList" Margin="0,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto"                             MaxHeight="125" ItemsSource="{Binding Source={StaticResource cvs}}">
+                                <ListBox.Resources>
+                                    <Style TargetType="ListBoxItem">
+                                        <Setter Property="Padding" Value="8,10,20,10"/>
+                                    </Style>
+                                </ListBox.Resources>
+                            </ListBox>
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock Grid.ColumnSpan="2" Style="{StaticResource BaseTextBlockStyle}" Grid.Row="1" TextWrapping="Wrap">Enter a message to send:</TextBlock>
+                    <TextBox x:ConnectionId='5' x:Name="MessageTextBox" Grid.Column="0" Grid.Row="2" Margin="0,10,10,0"/>
+                    <Button x:ConnectionId='6' x:Name="SendButton" Grid.Column="1" Grid.Row="2" Content="Send" Margin="0,10,10,0"                         />
+                    <ListBox x:ConnectionId='7' x:Name="ConversationListBox" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="300" Margin="0,10,0,0" ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
+

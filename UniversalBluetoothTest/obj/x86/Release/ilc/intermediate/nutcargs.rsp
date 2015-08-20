@@ -1,0 +1,9 @@
+/ignoreAccessChecks
+/metadataFile "C:\Users\Bary\Documents\Visual Studio 2015\Projects\UniversalBluetoothTest\UniversalBluetoothTest\obj\x86\Release\ilc\intermediate\ILTransformed\UniversalBluetoothTest.metadata"
+/reflectionMetadataAssemblyName "System.Private.CoreLib"
+/o
+/sharedGenerics
+/ilmergeinfo "C:\Users\Bary\Documents\Visual Studio 2015\Projects\UniversalBluetoothTest\UniversalBluetoothTest\obj\x86\Release\ilc\intermediate\ILTransformed\UniversalBluetoothTest.csv"
+/sharedGenericsMode StandardHeuristics
+/in "C:\Users\Bary\Documents\Visual Studio 2015\Projects\UniversalBluetoothTest\UniversalBluetoothTest\obj\x86\Release\ilc\intermediate\ILTransformed\UniversalBluetoothTest.ilexe"
+/out "C:\Users\Bary\Documents\Visual Studio 2015\Projects\UniversalBluetoothTest\UniversalBluetoothTest\obj\x86\Release\ilc\intermediate\MDIL\UniversalBluetoothTest.mdilexe"

@@ -1,0 +1,1 @@
+C:\Users\Bary\Documents\Visual Studio 2015\Projects\UniversalBluetoothTest\UniversalBluetoothTest\UniversalBluetoothTest.csproj;x86
